@@ -1,0 +1,40 @@
+.logo-container{
+  height: 36px;
+  img{
+    height: 100%;
+  }
+  .logo{
+    height: 28px;
+    vertical-align: top;
+  }
+}
+
+.header{
+  padding: 20px 36px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+$navbar-item-height: 28px;
+$navbar-item-width: 72px;
+.navbar{
+  .navbar-item{
+    display: inline-block;
+    border-radius: $navbar-item-height;
+    height: $navbar-item-height;
+    width: $navbar-item-width;
+    line-height: $navbar-item-height;
+    margin: 0 20px;
+    text-align: center;
+    color: #fff;
+    font-size: 20px;
+    text-decoration: none;
+    font-weight: bold;
+    &--active{
+      background-color: #fff;
+      color: #000;
+      mix-blend-mode: screen;
+    }
+  }
+}

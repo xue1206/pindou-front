@@ -1,26 +1,34 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { Provider, useSelector } from 'react-redux';
+import store from './store';
+import Header from './components/Header';
+import { BrowserRouter, Switch, Route, Redirect} from 'react-router-dom';
+import New from './views/new';
+import All from './views/all';
+import { selectors } from './store/modules/material';
 
 const App: React.FC = () => {
+  const background = useSelector(selectors.background);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="main" style={{background: background || '#123456'}}>
+      <BrowserRouter>
+        <Header></Header>
+        <main className="content">
+          <Switch>
+            <Route path="/new"><New></New></Route>
+            <Route path="/all"><All></All></Route>
+            <Redirect to="/new"></Redirect>
+          </Switch>
+        </main>
+      </BrowserRouter>
     </div>
   );
 }
 
-export default App;
+export default function Root() {
+  return (
+    <Provider store={store}>
+      <App />
+    </Provider>
+  )
+};

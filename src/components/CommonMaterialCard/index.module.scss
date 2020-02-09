@@ -1,0 +1,53 @@
+.common-material-card{
+  width: 180px;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  background: #fff;
+  border-radius: 8px;
+  padding: 20px 0;
+  &__title{
+    font-size: 22px;
+    margin: 10px 0;
+    color: #d55568;
+  }
+  &__authority{
+    font-size: 18px;
+    margin: 4px 0 60px;
+    color: #000;
+  }
+  &__button{
+    height: 32px;
+    width: 75%;
+    border-radius: 32px;
+    background: #d26171;
+    font-size: 20px;
+    // line-height: 32px;
+    text-align: center;
+    color: #fff;
+  }
+}
+
+.material-logo{
+  height: 200px;
+  width: 100%;
+  position: relative;
+  &__background{
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  &__cover{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+}
