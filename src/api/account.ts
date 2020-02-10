@@ -1,6 +1,7 @@
 import ajax from '../utils/ajax';
 import { UserInfo } from '../entity';
 // update local
+// test git
 interface LoginInfo {
   token: string,
   userInfo: UserInfo,
