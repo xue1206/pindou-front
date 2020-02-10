@@ -1,6 +1,6 @@
 import ajax from '../utils/ajax';
 import { UserInfo } from '../entity';
-
+// update local
 interface LoginInfo {
   token: string,
   userInfo: UserInfo,
