@@ -1,4 +1,4 @@
-import React, { useCallback } from 'react';
+import React from 'react';
 import style from './index.module.scss';
 import { NavLink } from 'react-router-dom';
 
